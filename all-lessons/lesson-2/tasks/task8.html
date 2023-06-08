@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <h4>Знайти суму випадкового номера місяця (від 1 до 12) та випадкового номера дня (від 0 до 6).</h4>
+   <script>
+
+      //0.Вказуем дні та місяці з яких будемо вибирати рандомне число 
+
+      let minDay = 0;
+      let maxDay = 6;
+      let minMonth = 1;
+      let maxMonth = 12;
+      
+      let sumRandomCount = randomDay + randomMonth ;
+
+    //1.Використовуем формулу для рандомного підрахунку 
+
+      let randomMonth = minMonth + Math.floor(Math.random() * maxMonth);
+      let randomDay = Math.floor(Math.random() * maxDay);
+     
+      document.write(`Рандомний день від (від 0 до 6) = ${randomDay}</br>`);
+      document.write(`Рандомний місяць від (від 1 до 12) = ${randomMonth}</br>`);
+      document.write(`Сума рандомних дня та місяця = ${sumRandomCount}</br>`);
+    
+   </script>
+</body>
+</html>

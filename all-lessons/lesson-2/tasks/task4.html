@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <h4>Дано вартість одиниці товару і кількість. Знайти загальну вартість та ПДВ (5% від загальної вартості). </h4>
+   <script>
+      //0. Вказуем одиниці товару та кількість
+
+      let priceOneProduct = parseInt(prompt('Вкажить ціну за одиницю товару','1'));
+      let countProduct = parseFloat(prompt('Вкажить загальну кількість товару','1'));
+
+      let sumAllProduct = priceOneProduct * countProduct;
+
+      let procentTax = 5;
+
+      let productTaxProcent = (sumAllProduct * 5) / 100;
+
+
+      //1. Рахуемо загальну сумму кількісті товару та ПДВ
+
+      if (priceOneProduct > 0 & countProduct > 0 ){
+         document.write(`Загальна вартість товару становить ${sumAllProduct.toFixed(0)} $, <br> ПДВ 5% від загальної кількості товару становить ${productTaxProcent.toFixed(2)} $`); 
+         
+      }else{
+         document.write(`Немає товару або товар бескоштовний `);
+      }
+
+      
+   
+
+   </script>
+</body>
+</html>
