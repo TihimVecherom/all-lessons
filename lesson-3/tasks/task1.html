@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <h1>Розрахувати</h1>
+  
+   <h4>З клавіатури вводяться імена двох дітей та кількість у них цукерок. Вивести не екран ім’я тієї дитини, у якої кількість цукерок є більшою, або вивести, що кількість однакова.: </h4>
+         
+         
+  
+    
+  
+   <script>
+
+      //0.Вводимо значення 
+      
+         let nameFirstСhild = prompt('Введить ім’я першої дитини');
+         let amountСandiesFirstСhild = parseInt(+prompt(`Введить кількість цукерок у ${nameFirstСhild}`));
+         let resultFirstChild = '';
+
+
+         let nameTwoСhild = prompt('Введить ім’я другої дитини');
+         let amountСandiesTwoСhild = parseInt(+prompt(`Введить кількість цукерок у ${nameTwoСhild}`));
+         let resultTwoChild = '';
+        
+         
+        let resultAll = "";
+
+        let countDifferenceFirst = amountСandiesFirstСhild - amountСandiesTwoСhild;
+        let countDifferenceTwo = amountСandiesTwoСhild - amountСandiesFirstСhild;
+
+        // 2. Знаходимо результат
+
+        if (+nameFirstСhild || !amountСandiesFirstСhild ){
+          resultFirstChild = document.write(`Перше ім’я введене не коректно або кількість цукерок не може бути строкою <br>`);
+
+          if (+nameTwoСhild || !amountСandiesTwoСhild ){
+            resultTwoChild = document.write(`Друге ім’я введене не коректно або кількість цукерок не може бути строкою`);
+            }
+
+        }
+        
+      
+        else{
+
+            resultFirstChild = document.write(`ім’я першої дитини ${nameFirstСhild} та кількість ії конфет ${amountСandiesFirstСhild} <br>`);
+            resultTwoChild = document.write(`ім’я другої дитини ${nameTwoСhild} та кількість ії конфет ${amountСandiesTwoСhild} <br>`);
+
+            if (amountСandiesFirstСhild > amountСandiesTwoСhild ){
+               resultAll = document.write(`У  ${nameFirstСhild} на ${countDifferenceFirst} більше конфет ніж у ${nameTwoСhild} <br>`);
+
+            }else if(amountСandiesFirstСhild < amountСandiesTwoСhild){
+               resultAll = document.write(`У  ${nameTwoСhild} на ${countDifferenceTwo} більше конфет ніж у ${nameFirstСhild} <br>`);
+
+            }else{
+               resultAll = document.write(`У  ${nameTwoСhild} та ${nameFirstСhild} однакова кількість конфет <br>`);
+            }
+        }
+
+
+        // 3. Виводимо результат
+    
+    
+        
+   </script>
+  
+</body>
+
+</html>
