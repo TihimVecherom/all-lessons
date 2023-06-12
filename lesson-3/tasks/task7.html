@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <h1>Розрахувати</h1>
+  
+   <h4>З клавіатури вводиться номер місяця. Вивести до якої пори він відноситься</h4>
+         
+   <script>
+
+     let numberMonths = parseInt(prompt('Введить номер місяця'));
+
+     let groupeMonths = '';
+
+     switch (numberMonths) {
+        case 3:
+        case 4:
+        case 5:
+        groupeMonths= 'Весна';
+           break;
+         case 6:
+         case 7:
+         case 8:
+         groupeMonths = 'Літо';
+         break;
+           case 9:
+           case 10:
+           case 11:
+         groupeMonths = 'Осінь';
+         break;
+         case 1:
+         case 12:
+         case 2:
+         groupeMonths = 'Зима';
+         break;
+        default:
+        document.write(`Такого місяця не існує`)
+         break;
+     }
+     if (groupeMonths){
+      document.write(`Ваш номер місяця відноситься до пори ${groupeMonths}`)
+     }
+      
+     
+      
+   </script>
+  
+</body>
+
+</html>

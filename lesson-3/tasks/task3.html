@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <h1>Розрахувати</h1>
+  
+   <h4>Випадковим чином генерується число від 1 до 5. Спробуйте вгадати число за 2 спроби. </h4>
+         
+         
+  
+    
+  
+   <script>
+
+      // вводимо данні 
+
+      let minNum = 1;
+      let maxNum = 5;
+
+      let randomNum = minNum + Math.floor(Math.random() * maxNum);
+      
+
+      let infoPopap = alert('Загадай число від 1 до 965.5... та натисни ок');
+      let infoPopapTwo = alert('І ти повірив ?В умові сказано від 1 до 5 , вгадай число та отримаєш приз , як що готовий тисни ок');
+      let firstTry = parseInt(+prompt('Яке це число ? (перша спроба)','ніколи не вгадаешь'));
+
+    
+      
+
+      if (firstTry === randomNum){
+         alert(`Ви вгадали ваше чісло ${randomNum}`);
+         alert(`Авжеж ти знав що за число , приза не буде - обманул`);
+      }
+      
+      else{
+         alert(`Не вгадавав , давай ще разок чемп`);
+         let firstTry = parseInt(+prompt('Яке це число ? (Друга спроба)','ніколи не вгадаешь'));
+         if (firstTry === randomNum){
+            alert(`Ви вгадали ваше число ${randomNum}`);
+            alert(`Авжеж ти знав що за число , приза не буде - обманув`);
+         }else if (firstTry !== randomNum){
+            alert(`Не фартануло та спроби скінчілись `);
+            alert(`Спробуй в другий раз  `);
+         }
+         
+         
+      }
+      
+   </script>
+  
+</body>
+
+</html>
