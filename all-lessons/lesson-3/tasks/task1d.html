@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <h1>Розрахувати</h1>
+  
+   <h4>На екран виводиться меню:</h4>
+         
+   <script>
+
+      let menu;
+  
+      let numMenu = parseInt(prompt('Введить номер меню'))
+
+      switch (numMenu) {
+         case 1:
+         menu = document.write('<nav class="menu"><ol><li>Веселий <span >:)</span> </li> <br><li>Сумний </li> <br><li>Обурений </li></ol></nav>')
+            break;
+         case 2:
+         menu = document.write('<nav class="menu"><ol><li>Веселий </li> <br><li>Сумний  <span >:(</span> </li> <br><li>Обурений  </li></ol></nav>')
+            break;
+         case 3:
+         menu = document.write('<nav class="menu"><ol><li>Веселий </li> <br><li>Сумний  </li> <br><li>Обурений <span >:|</span> </li></ol></nav>')
+            break;   
+         break;
+         default : 
+         menu = document.write('<nav class="menu"><ol><li>Веселий </li> <br><li>Сумний  </li> <br><li>Обурений </li></ol> <br> <span class="infotext" >Некоректно введений номер меню</span></nav>')
+            break;
+      }
+      
+      
+   </script>
+
+   <style>
+      .menu{
+         border: 1px solid black;
+      }
+
+      .infotext{
+         padding: 0px 20px 20px;
+         display: block;
+         color: red;
+      }
+      
+   </style>
+  
+</body>
+
+</html>

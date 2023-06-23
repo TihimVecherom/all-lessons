@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <h1>Розрахувати</h1>
+  
+   <h4> Комп’ютер випадковим чином вибирає початок і кінець проміжку (проміжок повинен знаходитися в межах від 1 до 100). Користувач вводить число і виграє, якщо число знаходиться у цьому проміжку, або розташоване від нього (від лівого або правого краю) не більше ніж на 10. </h4>
+         
+         
+  
+    
+  
+   <script>
+
+      // вводимо данні 
+      let minNum = 1;
+      let maxNum = 100;
+
+      let randomNum = minNum + Math.floor(Math.random() * maxNum);
+      
+
+      alert(randomNum)
+      let tryWin = parseInt(prompt("Введите число"))
+      
+
+      if ((randomNum === tryWin) && (tryWin >= 1 && tryWin <= 100) ){
+         alert("Winner")
+         document.write(`Введене число ${tryWin} !== случайне число  ${randomNum}`)
+      }
+
+      else if (tryWin <= 0 || tryWin > 100){
+         alert("Number not found within 1-100 ")
+            document.write(`Введене не допустиме число ${tryWin} !== случайне число  ${randomNum}`)
+      }
+
+      else if (!tryWin){
+            alert('Not correct num')
+            document.write(`Введено не число`)
+      }
+      
+      else{
+
+         if ((tryWin <= tryWin - 10) || (tryWin <= tryWin + 10)){
+         alert("Winner extra (-10 or +10 to the entered number)")
+         document.write(`Введене число ${tryWin} !== случайне число  ${randomNum}`)
+
+         }else{
+            alert('You lose')
+         document.write(`Введене число ${tryWin} !== случайне число  ${randomNum}`)
+         }
+        
+      }
+
+
+      
+     
+        
+   </script>
+  
+</body>
+
+</html>

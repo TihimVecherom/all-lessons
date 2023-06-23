@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <h1>Розрахувати</h1>
+  
+   <h4>З клавіатури вводиться ціна товару і кількість грошей. Якщо грошей не вистачає то відмовляємо у покупці, інакше, якщо ще залишаються гроші, то пропонуємо купити лотерею за 4 грн. </h4>
+         
+         
+  
+    
+  
+   <script>
+
+      // вводимо данні 
+
+      let priceProduct = parseFloat(prompt('Введить ціну товару '));
+      let countMany = parseFloat(prompt('Введить кількість ваших грошей '));
+      let remainderMany = countMany - priceProduct;
+
+      let lottery = "лотерея";
+      let lotteryPrice = 4;
+      let currency = "грн";
+
+      let buyerAction = "";
+      let statusBay = "";
+     
+
+      if (+priceProduct > countMany || +remainderMany < 4){
+         alert(`У вас бракує грошей `);
+         let statusBay = document.write("Будь ласка поповніть свій баланс");
+         
+
+        
+      }else{
+         
+         let buyerAction = confirm(`У вас залишилось ${remainderMany} ${currency} Бажаете придбати вийгришну на 100% без проігришу вот так купили та вийграли нове жеття - ${lottery} за ${lotteryPrice} ${currency}?`);
+         if(buyerAction === true){
+            alert(`ДЯКУЭМ, у вас залишилось ${remainderMany - lotteryPrice} ${currency}`);
+            let statusBay = document.write(`ДЯКУЭМ, у вас залишилось ${remainderMany - lotteryPrice} ${currency} - Приходьте ще !!!`);
+         }else if(buyerAction === false){
+            alert(`ДЯКУЭМ, у вас залишилось ${remainderMany} ${currency} `);
+            let statusBay = document.write(`ДЯКУЭМ, у вас залишилось ${remainderMany} ${currency} - Приходьте ще разок може два!!!`);
+            
+         }
+        
+      } 
+    
+        
+   </script>
+  
+</body>
+
+</html>

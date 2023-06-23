@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <h1>Розрахувати</h1>
+  
+   <h4>З клавіатури вводиться номер дня тижня. Вивести на екран назву дня.</h4>
+         
+   <script>
+
+      // вводимо данні 
+      let numDay = parseInt(prompt('Введить номер дня тижня щоб узнати як він називається'));
+      let nameDay = '';
+
+      switch (numDay) {
+         case 1:
+         nameDay = 'Понеділок';
+            break;
+
+         case 2:
+         nameDay = 'Вівторок';
+            break;
+
+         case 3:
+         nameDay = 'Середа';
+            break;
+
+         case 4:
+         nameDay = 'Четверг';
+            break;
+
+         case 5:
+         nameDay = 'П`ятниця';
+            break;
+
+         case 6:
+         nameDay = 'Субота';
+            break;
+
+         case 7:
+         nameDay = 'Неділя';
+            break;
+           default : 
+           nameDay = 'Невірно вказан номер дня';
+           break
+      
+      }
+      document.write(`${nameDay}`);
+      
+   </script>
+  
+</body>
+
+</html>
